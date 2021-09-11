@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:products_details/screen/api_call.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 class ProductsDetails extends StatelessWidget {
@@ -26,7 +27,14 @@ class ProductsDetails extends StatelessWidget {
                           color: Color(0xff616161),
                           size: 15.0,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ApiCall(),
+                            ),
+                          );
+                        },
                       ),
                       Text(
                         "Products Details",
